@@ -1,0 +1,36 @@
+body{
+    color: white;
+    background-color: rgb(40,40,40);
+}
+hr{
+    background-color: white;
+}
+h1{
+    text-align: center;
+}
+h2{
+  text-decoration: underline;
+}
+ 
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 25%;
+  }
+  
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+  }
+
+tr:nth-of-type(even){
+    background-color: #505050;
+  }
+.tr:nth-of-type(odd) {
+    background-color: #dddddd;
+    color: black;
+  }
+
+
