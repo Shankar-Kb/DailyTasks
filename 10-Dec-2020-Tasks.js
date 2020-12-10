@@ -30,7 +30,7 @@ request.onload = function() {
 
     requestTempLatLon.onload = function(){
         var dataTempLatLon = JSON.parse(this.response);
-        console.log('The Lat Lon Temperature is');
+        console.log('The Lat Lon Temperature for '+countryName+' is');
         console.log(dataTempLatLon);
     }
 
@@ -46,7 +46,7 @@ request.onload = function() {
 
     requestTempCity.onload = function(){
         var dataTempCity = JSON.parse(this.response);
-        console.log('The City Temperature is');
+        console.log('The City Temperature for '+cityName+' is');
         console.log(dataTempCity);
 
     }
