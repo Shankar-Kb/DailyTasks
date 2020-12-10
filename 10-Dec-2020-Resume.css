@@ -2,6 +2,9 @@ body{
     color: white;
     background-color: rgb(40,40,40);
 }
+div{
+  padding: 3px;
+}
 hr{
     background-color: white;
 }
