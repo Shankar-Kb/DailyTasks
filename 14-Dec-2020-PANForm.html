@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAN Form</title>
+    <link rel="stylesheet" href="14-Dec-2020-PANForm.css">
+</head>
+<body style="background-color: burlywood;">
+
+    <div class='PAN-Container'>
+         <table class='PAN-Form' width='100%' cellspacing='0' border='1'>
+             <tbody>
+          <tr class='Form-Heading'>
+          <th></th>
+          <th colspan='2'>
+              <span>Request For New PAN Card Or/And Changes Or Correction in PAN Data</span><br>
+              <span>Fields marked with *(asterisk) are mandatory. To avoid mistake(s), please refer <a href=''>guidelines</a> and <a href=''>instructions</a></span>
+          </th>
+          </tr>
+          <tr>
+              <td>&nbsp;</td>
+              <td colspan='2'><span><font color="red">*</font><b> Whether Citizen of india</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes" name="citizen" value="yes">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="no">No</label>
+                <input type="radio" id="no" name="citizen" value="no">
+                </span>
+               </td>
+          </tr>
+          <tr>
+              <td>&nbsp;</td>
+              <td colspan='2'><form>
+                <label for='PAN ID'><font color="red">*</font><b> Permanent Account Number (PAN)</b></label>
+                <input type='text' id='panID' name='PAN ID'>
+              </form>
+              </td>
+          </tr>
+          <tr>
+              <td ><input type='checkbox' id='checkboxName' name='' value='Name'></td>
+              <td colspan='2'>
+                  <span><font color="red">*</font><b> 1. Name</b></span>
+              </td>
+          </tr>
+          <tr>
+              <td>&nbsp;</td>
+              <td colspan='2'>
+                  <span><b>Title</b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label for='Mr'>Shri/Mr</label>
+                  <input type='radio' id='Mr' name='Mr' value='Mr'>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label for='Mr'>Smt./Mrs.</label>
+                  <input type='radio' id='Mrs' name='Mrs' value='Mrs'>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label for='Mr'>Kumari/Ms</label>
+                  <input type='radio' id='Mrs' name='Ms' value='Ms'>
+                  </span>
+              </td>
+          </tr>
+          <tr>
+              <td>&nbsp;</td>
+              <td colspan='2'>
+                <table class='NameBoxes'>
+                <tbody>    
+                <tr>
+               <td><label for='Last_Name'><b>Last Name/Surname</b></label> <br>
+               <input type='text' id='lastName' name='Last_Name' value=''>  </td>
+              
+               <td><label for='First_Name'><b>First Name</b></label> <br>
+               <input type='text' id='firstName' name='First_Name' value=''></td>
+            
+                <td><label for='Middle_Name'><b>Middle Name</b></label> <br>
+                <input type='text' id='middleName' name='Middle_Name' value=''> </td>
+                </tr>
+                </tbody> 
+                </table>
+                </td>
+            </tr>
+           <tr>
+               <td>&nbsp;</td>
+               <td colspan='2'><font color="red">*</font><b> Name as you would like it printed on the card </b>
+                <font color=blue><span>(Prefix like Shri, Smt, Kumari, Late,
+                    Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed)</span></font>
+                </td>
+           </tr>
+           <tr>
+               <td>&nbsp;</td>
+               <td colspan='2'><input type='text' id='namePrint' name='Print_Name' value=''</td>
+           </tr>
+           <tr>
+               <td>&nbsp;</td>
+               <td colspan='2'><b>Details of Parents. </b><font color="#0000FF">
+               <span> (Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed.)
+               </span></font>
+                </td>
+           </tr>
+           <tr>
+               <td>&nbsp;</td>
+               
+               <td><b>Whether mother is single parent and you wish to apply for PAN by furnishing the name of your mother only </b>
+              
+            </td>
+               
+                <td colspan='2'>
+                <label for='sParentYes'>Yes</label>
+                <input type='radio' id='spYes' name='sParentYes' value='Yes'>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for='sParentNo'>No</label>
+                <input type='radio' id='spNo' name='sParentYes' value=''>
+                </td>
+               
+            
+            </tr>
+            <tr>
+                <td><input type='checkbox' id='checkboxName' name='' value='Name'></td>
+                <td colspan='2'>
+                    <font color="red">*</font><b> Father's Name</b><font color="#0000FF">
+                    <span> (Mandatory field. Even married women should give father's name only.)
+                    </span></font>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td colspan='2'>
+                  <table class='NameBoxes'>
+                  <tbody>    
+                 <tr>
+                 <td><label for='Last_Name'><b>Last Name/Surname</b></label> <br>
+                 <input type='text' id='lastName' name='Last_Name' value=''>  </td>
+                
+                 <td><label for='First_Name'><b>First Name</b></label> <br>
+                 <input type='text' id='firstName' name='First_Name' value=''></td>
+              
+                  <td><label for='Middle_Name'><b>Middle Name</b></label> <br>
+                  <input type='text' id='middleName' name='Middle_Name' value=''> </td>
+                  </tr>
+                  </tbody> 
+                  </table>
+                  </td>
+              </tr>
+
+              <tr>
+                  <td>&nbsp;</td>
+                  <td colspan='2'>
+                    <font color="#0000FF">
+                        <span> Mother's Name(This field is optional)
+                        </span></font>
+                    </td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td colspan='2'>
+                  <table class='NameBoxes'>
+                  <tbody>    
+                 <tr>
+                 <td><label for='Last_Name'><b>Last Name/Surname</b></label> <br>
+                 <input type='text' id='lastName' name='Last_Name' value=''>  </td>
+                
+                 <td><label for='First_Name'><b>First Name</b></label> <br>
+                 <input type='text' id='firstName' name='First_Name' value=''></td>
+              
+                  <td><label for='Middle_Name'><b>Middle Name</b></label> <br>
+                  <input type='text' id='middleName' name='Middle_Name' value=''> </td>
+                  </tr>
+                  </tbody> 
+                  </table>
+                  </td>
+              </tr>
+
+              <tr>
+                  <td>&nbsp;</td>
+                  <td><font color="red">*</font> 4. Select Parent name which is to be printed on the card
+                  <br>
+                  <span style="color: blue"> (In case no option is provided then PAN card will be issued with father's name)</span>
+                  </td>
+                  <td>
+                    Father Name <input type="radio" name="Pan_Parent_Name_Print" value="F" id="fatherName">
+                    
+                    Mother Name <input type="radio" name="Pan_Parent_Name_Print" value="M" id="motherName"> 
+                    </td>
+              </tr>
+
+              <tr>
+              <td>
+              <input type="checkbox" name="PanBirthCheck" value="Y" id="panBirthCheck">
+              </td>
+              <td>
+              <b><font color="red">*</font> 5. Date of Birth/Incorporation/Agreement/Partnership<br>
+              or Trust Deed/Formation of Body of Individuals/<br>
+             Association of Persons
+             </b></td>
+             <td>
+             <table cellspacing="0" cellpadding="0" border="0">
+             <tbody><tr>
+             <td valign="top"><font size="-1">DD</font><br>
+               <select name="PanBirthDate">
+               <option value=""> DD</option>
+               <option value="01"> 1</option>
+             </select>
+            </td>
+            <td valign="top"><font size="-1">MM</font><br>
+             <select name="PanBirthMonth">
+               <option value=""> MM</option>
+               <option value="01"> JAN</option>
+             </select>
+            </td>
+            <td valign="top"><font size="-1">YYYY</font><br>
+             <input type="text" name="PanBirthYear" value="" size="4" maxlength="4">
+            </td>
+            </tr>
+            </tbody></table>
+            </td>
+            </tr>
+
+            <tr>
+               
+                <td>
+                 <input type="checkbox" name="PanSexCheck" value="Yes">
+                 </td>
+                
+                     <td>
+                      <b><font color="RED">*</font> 6. Gender</b>
+                      </td>
+                       <td>
+                       Male <input type="radio" name="PanSex" value="M">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                       Female <input type="radio" name="PanSex" value="F">
+                       &nbsp;&nbsp;&nbsp;&nbsp;
+                       TransGender <input type="radio" name="PanSex" value="T">
+                       </td>
+            </tr>
+
+            <tr>
+                <td>
+                   <input type="checkbox" name="PanPhotoMisCheck" value="Yes">
+                </td>
+                <td colspan="2">
+                    <b>&nbsp;&nbsp; 7. Photo Mismatch</b>
+                </td>
+             </tr>
+
+             <tr>
+                <td>
+                    <input type="checkbox" name="PanSigMisCheck" value="Yes">
+                </td>
+                <td colspan="2">
+                    <b>&nbsp;&nbsp; 8. Signature Mismatch</b>
+                </td>
+             </tr>
+
+             <tr>
+                <td>
+                   <input type="checkbox" name="PanComAdrChk" value="Y" checked="" onclick="return false;">
+                </td>
+                <td>
+                   <b><font color="RED">*</font> 9. Address for Communication</b>
+                </td>
+                <td>
+                  Residential
+                  <input type="radio" name="PanComAdrFlag" value="R" >
+            
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  Office
+                 <input type="radio" name="PanComAdrFlag" value="O" > 
+             
+                </td>
+             </tr>
+
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>Office Name</b><i> (to be filled only in case of office address)</i></td>
+                <td><input type="text" name="PanOfficeName" value="" size="30" maxlength="64"></td>
+             </tr>
+
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>Flat/Door/Block No.</b></td>
+                <td><input type="text" name="PanAdrLine1" value="" size="25" maxlength="25"></td>
+             </tr>
+
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>Name of Premises/Building/Village</b></td>
+                <td><input type="text" name="PanAdrLine2" value="" size="25" maxlength="25"></td>
+             </tr>
+
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>Road/Street/Lane/Post Office</b></td>
+                <td><input type="text" name="PanAdrLine3" value="" size="25" maxlength="25"></td>
+             </tr>
+
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>Area/Locality/Taluka/Sub-Division</b></td>
+                <td><input type="text" name="PanAdrLine4" value="" size="25" maxlength="25"></td>
+             </tr>
+
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>Town/City/District</b></td>
+                <td><input type="text" name="PanAdrLine5" value="" size="25" maxlength="25"></td>
+             </tr>
+
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>State/Union Territory</b></td>
+                <td>
+                 <select name="PanAdrState">
+                   <option value="">-- Please Select --</option>
+                   <option value="1"> Tamil Nadu</option>
+                   <option value="2"> Karnataka</option>
+                  </select>
+                </td>
+             </tr>
+
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>PIN</b> <i>(Indicating PIN is mandatory)</i></td>
+                <td><input type="text" name="PanAdrPin" value="" size="6" maxlength="6"></td>
+              </tr>
+
+              <tr>
+                <td>&nbsp;</td>
+                <td><b>Country</b></td>
+                <td>
+                  <select name="PanAdrCountry" id="selectPanCountry">
+                    <option value="" >-- Please Select --</option>
+                    <option value="IN" >India</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td>&nbsp;</td>
+                <td><b>Zip</b></td>
+                <td><input type="text" name="PanAdrZip" value="" size="6" maxlength="6"></td>
+              </tr>
+
+              <tr>
+                <td>
+                   <input type="checkbox" id="otrAdrChk" name="PanUpdChk" value="Y">
+                </td>
+                <td colspan="2">
+                   <b> 10. If you desire to update your other address, give required details &amp; </b> <b> <u> Submit proof of other
+                   address also</u>.</b>
+                </td>
+              </tr>
+
+
+
+            </tbody>
+         </table>
+
+    </div>
+</body>
+</html>
