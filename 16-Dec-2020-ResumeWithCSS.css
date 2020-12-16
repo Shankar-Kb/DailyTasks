@@ -1,0 +1,75 @@
+.Left{
+    text-align: left;
+}
+.Right{
+    text-align: right;
+}  
+.Center{
+   text-align: center;
+}
+.FontStyle{
+   font-style: italic;
+}
+body{
+    background-color: #CDC9C9;
+    border: none;
+    padding: 0px;
+    margin: 0px 200px;
+}
+.UpperBody{
+    background-color: Grey;
+    height: 250px;
+    position: relative;
+}
+.WhiteBar{
+   background-color: white; 
+   height: 30px;
+   position: relative;
+    top: 35px;
+}
+.BigNameBox{
+    display: inline;
+    background-color: orange;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    font-size: 75px;
+    border: none;
+    border-radius: 20px;
+    padding: 0px 30px;
+    position: relative;
+    top: 95px;
+    z-index: 1;
+}
+
+span{
+   border: none;
+   padding: 0px 25px; 
+}
+
+h2{
+   position: relative;
+   left: 10px;
+}
+
+.Contents{
+   border: 1px solid black;
+   height: 250px;
+   width: 35%;
+}
+
+.Studies{
+    padding: 0px 0px 0px 10px;
+}
+.Date{
+    padding: 0px 10px 0px 0px;
+}
+.Text{
+   font-family:'Courier New', Courier, monospace;
+}
+/* .VerticalLine{
+ border-left: 6px solid black;
+ height: 500px;
+ position: relative;
+ left: 50%;
+ margin-left: -3px;
+ top: 10%;
+} */
