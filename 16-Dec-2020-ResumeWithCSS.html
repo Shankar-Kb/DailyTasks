@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume with CSS</title>
     <link rel='stylesheet' href='16-Dec-2020-ResumeWithCSS.css'>
-    <style>
-    .Left{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>.Left{
         text-align: left;
     }
     .Right{
@@ -15,6 +17,11 @@
     .Center{
        text-align: center;
     }
+    .Text{
+        font-family:'Courier New', Courier, monospace;
+        font-family: 'Roboto', sans-serif !important;
+        font-size: 1.15em;
+     }
     .FontStyle{
        font-style: italic;
     }
@@ -24,8 +31,23 @@
         padding: 0px;
         margin: 0px 200px;
     }
+    .Image{
+        width: 100px;
+        height: 100px;
+        border-radius: 50% dashed white;
+        position: relative;
+        left: 44%;
+        top: 0%;
+    }
+    
+    img{
+        width: 150px;
+        height: 150px;
+        border: 5px dashed orange;
+        border-radius: 50%;
+    }
     .UpperBody{
-        background-color: Grey;
+        background-color: rgb(41, 41, 41);
         height: 250px;
         position: relative;
     }
@@ -33,18 +55,18 @@
        background-color: white; 
        height: 30px;
        position: relative;
-        top: 35px;
+        top: -2.5%;
     }
     .BigNameBox{
         display: inline;
         background-color: orange;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-        font-size: 75px;
+        font-size: 4em;
         border: none;
         border-radius: 20px;
         padding: 0px 30px;
         position: relative;
-        top: 95px;
+        top: 17.5%;
         z-index: 1;
     }
     
@@ -58,11 +80,62 @@
        left: 10px;
     }
     
+    i{
+        border: 2px dashed white;
+        background-color: rgb(41, 41, 41);
+        padding: 10px;
+        border-radius: 50%;
+        color: orange;
+    }
+    
+    .LowerBody{
+        display: block;
+        width: 100%;
+    }
+    
     .Contents{
        border: 1px solid black;
-       height: 250px;
+       height: auto;
        width: 35%;
+       padding: 10px;
+       }
+    .Title{
+        margin-bottom: 10%;
+    }   
+    
+    #C1, #C3{
+       float: left;
+       padding-bottom: 10%;
+       clear: left;
+       border: none;
+    
     }
+    #C2, #C4{
+       float: right;
+       clear: right;
+       border: none;
+       padding-left: 15%;
+       padding-bottom: 10%;
+       border-left: 2px solid black;
+       }
+    
+    .Slider{
+        appearance: none;
+        width: 100%;
+        height: 25px;
+        background: inherit;
+    }
+    input[type="range"]::-moz-range-progress {
+        background-color: orange; 
+      }
+    input[type="range"]::-moz-range-track {  
+        background-color: #9a905d;
+      }
+    
+    td:nth-child(2){
+      position: relative;
+      right: -20%;
+     }
     
     .Studies{
         padding: 0px 0px 0px 10px;
@@ -70,91 +143,137 @@
     .Date{
         padding: 0px 10px 0px 0px;
     }
-    .Text{
-       font-family:'Courier New', Courier, monospace;
-    }
-    /* .VerticalLine{
-     border-left: 6px solid black;
-     height: 500px;
-     position: relative;
-     left: 50%;
-     margin-left: -3px;
-     top: 10%;
-    } */
     </style>
 </head>
 <body>
   <div class='MainBody'>
  <div class='UpperBody Center'>
-    
+    <div class='Image'>
+        <img src="https://st.depositphotos.com/2167093/3958/v/600/depositphotos_39580519-stock-illustration-user-man-icon-flat-design.jpg" alt="Stock User Image">
+    </div>
     <div class='BigNameBox'>
        <span><b>BHAVANI SHANKAR</b></span> 
     </div>
     <div class='WhiteBar'></div> 
     
  </div>
- 
+ <div class='Address FontStyle Text Center'>
+    <p>NPL Agastya Apartments, 590 T.H.Road, Chennai | 9710080555 | shankar.kb95@gmail.com</p>
+    <hr>
+</div>
  <div class='LowerBody Text Center'>
-     <div class='Address FontStyle Text'>
-          <p><i>NPL Agastya Apartments, 590 T.H.Road, Chennai | 9710080555 | shankar.kb95@gmail.com</i></p>
-          <hr>
-     </div>
-     <div class='VerticalLine'></div>
      
-     <section class='Contents Text Profile'>
-         <h2 class='Title Left'><b>Profile</b></h2>
+ 
+     <div class='Contents Text Profile' id='C1'>
+        <h2 class='Title Left'><b><i class="fa fa-user"></i> Profile</b></h2>
          <p>Aspiring Fullstack developer with knowledge in MERN stack. Love to tackle and solve new problems. Looking to gain some valueable experience while also working on real world projects</p>
-     </section>
+     </div>
+  
+     <div class='Contents Text Skills' id='C2'>
 
-     <section class='Contents Text Skills'>
-
-         <h2 class='Title Left'><b>Skills</b></h2>
-         <h3 class='Subtitle Center'>Technical Skills</h3>
-
-         <section class='Ranges Left'>
+         <h2 class='TitleTable Left'><b><i class="fa fa-flask"></i> Skills</b></h2>
+      
+         <table class='Ranges'>
+         <tr>
+         <td colspan=2>
+         <h3 class='Subtitle'>Technical Skills</h3>
+         </td>
+         </tr>
+        <tr>
+          <td class='Left'>
          <label for='Javascript'>Javascript</label>
-         <input type='range' name='Javascript' value='8' min='0' max='10';> <br>
+         </td>
+         <td>
+         <input type='range' id='Javascript' class='Slider' min='1' max='100' value='100'> 
+        </td>
+        </tr>
+        <tr>
+         <td class='Left'>
          <label for='HTML'>HTML</label>
-         <input type='range' name='HTML' value='7' min='0' max='10';> <br>
+         </td>
+         <td>
+         <input type='range' id='HTML' class='Slider' min='1' max='100' value='90'> 
+        </td>
+        </tr>
+        <tr>
+         <td class='Left'>
          <label for='CSS'>CSS</label>
-         <input type='range' name='CSS' value='6' min='0' max='10';>
-         </section>
-     </section>
-
-     <section class='Contents Text Experience'>
+         </td>
+        <td>
+         <input type='range' id='CSS' class='Slider' min='1' max='100' value='70'>
+        </td>
+        </tr>
+        <tr>
+            <td colspan=2>
+            <h3 class='Subtitle'>Additional Skills</h3>
+            </td>
+            </tr>
+           <tr>
+             <td class='Left'>
+            <label for='BusinessDev'>Business Development</label>
+            </td>
+            <td>
+            <input type='range' id='BusinessDev' class='Slider' min='1' max='100' value='85'> 
+           </td>
+           </tr>
+           <tr>
+            <td class='Left'>
+            <label for='Recruitment'>Recruitment</label>
+            </td>
+            <td>
+            <input type='range' id='Recruitment' class='Slider' min='1' max='100' value='75'> 
+           </td>
+           </tr>
+           <tr>
+            <td class='Left'>
+            <label for='Project Management'>Project Management</label>
+            </td>
+           <td>
+            <input type='range' id='Project Management' class='Slider' min='1' max='100' value='80'>
+           </td>
+           </tr>
+        </table>
+        </div>
+        
+     
+    
+     <div class='Contents Text Experience' id='C3'>
        
-        <h2 class='Title Left'><b>Projects Summary</b></h2>
+        <h2 class='Title Left'><b><i class="fa fa-briefcase"></i> Projects Summary</b></h2>
         <section class='Projects Left'>
             <ul>
                 <li>
                     <b>Anonymous Information Sharing:</b>
                     A comprehensive private chat application which is used to communicate through systems through an IP in a secure manner.
                 </li>
+                <br><br>
                 <li>
                     <b>Atheneum Information System:</b>
                     Atheneum Information System or also known as AIS is a form of library management which helps the student to search, track and even purchase books from the college library.
                 </li>
             </ul>
         </section>
-     </section>
+    </div>
 
-     <div class='Contents Text Education'>
-            <h2 class='Title Left'><b>Education</b></h2>
+     <div class='Contents Text Education' id='C4'>
+            <h2 class='Title Left'><b><i class="fa fa-graduation-cap"></i> Education</b></h2>
             <section class='Studies Left'>
             <h4><b>Computer Science Engineering </b></h4> <p class='Date Right'>2012-2016</p>
              <ul>
                  <li>
-                    Studied enginner at Dr. MGR University specializing in Comptuer Science.
+                    Studied enginneering at Dr. MGR University specializing in Comptuer Science.
                  </li>
-                 <br>
+                 <br><br>
                  <li>
-                     Developed two projects during the engineering course which are a Front-End Web Application and a Library Management Android Application.
+                     Developed two projects during the engineering course namely a Front-End Web Application and a Library Management Android Application.
                  </li>
              </ul>   
          </section>
      </div>
+   
 
  </div>
+
 </div>  
 
     
