@@ -16,40 +16,40 @@ body{
     font-size: 0.85vw;
 }
 .h1{
-    font-size: 5em;
+    font-size: 5vw;
     font-weight:bold;
     color: #fd5a5e;
 }
 .h2{
-    font-size: 3em;
+    font-size: 2.45vw;
     font-weight: bold;
 }
 .h3{
-    font-size: 2.5em;
+    font-size: 2.15vw;
     font-weight: bold;
 }
 .h4{
-    font-size: 2em;
+    font-size: 1.75vw;
     font-weight: bold;
 }
 .h5{
-    font-size: 1.5em;
+    font-size: 1.35vw;
 }
 .h6{
-    font-size: 1.1em;
+    font-size: 1vw;
 }
 .m{
-    font-size: 1.35rem;
+    font-size: 1.15vw;
 }
 .ml{
-    font-size: 1.55rem;
+    font-size: 1.35vw;
 }
 .l{
-    font-size: 5em;
+    font-size: 3.85vw;
     font-weight: bold;
 }
 .xl{
-    font-size: 6em;
+    font-size: 5vw;
     font-weight:bold;
 }
 
@@ -72,11 +72,16 @@ body{
 
 .box-1{
     display: flex;
-    flex-flow: column wrap;
-    align-content: center;
+    flex-flow: row;
+    align-content:space-around;
     align-items: center;
+    justify-content: space-around;
     height: 15vh;
-    width: 50vw;
+    width: 25vw;
+}
+.child-1a{
+    margin-right: .5vw;
+    margin-top: -1.5vw;
 }
 .box-2{
     display: flex;
@@ -149,10 +154,7 @@ body{
  }
 .child-4b, .child-4c, .child-4d, .child-4e{
  width: 20vw;
- font-size: 1.3em;
- }
- .child-5a, .child-5b{
-     font-size: 1.15em;
+ font-size: 1.10vw;
  }
 
  .box-5{
@@ -190,6 +192,7 @@ body{
      width: 35vw;
      display: flex;
      flex-flow: column;
+     justify-content: center;
  }
  .child-6b{
    display: flex;
@@ -208,6 +211,7 @@ body{
      width: 35vw;
      display: flex;
      flex-flow: column;
+     justify-content: center;
  }
  .child-7b{
    display: flex;

@@ -1,0 +1,90 @@
+body{
+    background-color:#ffffff;
+    padding: 0 45px;
+    font-size: 1vw;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.center{
+    text-align: center;
+}
+.bold{
+    font-weight: bold;
+}
+.red{
+    background-color: #981f15;
+    color: white;
+    font-weight: bold;
+    padding: .25vh .75vw;
+}
+.red-img{
+    background-color: #981f15;
+    color: white;
+    font-weight: bold;
+    padding: .25vh .75vw;
+    position: relative;
+    bottom: -.75vh;
+}
+.red-img-special{
+    bottom: 1.15vh;
+}
+.img-inside{
+ color: white;
+ position: relative;
+ bottom: 3.5vh;
+ right: .5vw;
+}
+.img-big{
+    position: relative;
+    top: 3.5vh;
+}
+.img-big-inside{
+    color: white;
+    position: relative;
+    right: .5vw;
+}
+.img-wide{
+   position: static;
+   margin-top: -2.5vh;
+}
+/* .heading{
+    padding-bottom: 3.5vh;
+} */
+.h1{
+    font-size: 7vw;
+    font-weight: bold;
+    position: relative;
+    top: -2.5vh;
+}
+.h2{
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+.s{
+    font-size: .85vw
+}
+.navbar{
+    display:flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+
+.para-red{
+    color:#981f15;
+    font-weight: bold;
+    font-size: 1.35em;
+    padding: 0 2.5vw 0 2.5vw;
+}
