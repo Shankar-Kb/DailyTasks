@@ -34,12 +34,15 @@ containerBox.setAttribute('id', 'CB');
 document.body.append(containerBox);
 
 document.body.addEventListener('keypress', function(event){
-
-    if(window.event.keyCode<=47 || window.event.keyCode>=59){
-        alert('Only Numbers are allowed');
+    // /^([0-9]+)?([.()+-]+)?$/g;
+    var regExp = /[\d.()*+-/]/;
+    if(regExp.test(window.event.key)){
+        var display = document.getElementById('display');
+        display.value += event.key;
+        
     }else{
-    var display = document.getElementById('display');
-    display.value += event.key;
+        //console.log(window.event.key);
+        alert('Only Numbers are allowed');  
     }
     });
 
