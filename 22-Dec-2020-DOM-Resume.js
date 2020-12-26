@@ -35,7 +35,7 @@ bigName.innerHTML = '<span>BHAVANI SHANKAR</span>';
 box1.append(imageBox, whiteBar, bigName);
 
 var addressBar = createHtmlElement('span','address-bar center','AB');
-addressBar.innerHTML = 'Chennai | 9710080555 | shankar.kb95@gmail.com';
+addressBar.innerHTML = 'N. Damen Avenue, Chicago 999999 | 99999-99999 | hello@kick-resume.com';
 var line1 = createHtmlElement('hr', 'line-1');
 box2.append(addressBar, line1);
 
