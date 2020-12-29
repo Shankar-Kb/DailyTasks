@@ -10,6 +10,7 @@ function createInputElement(element, type, Name, className='', id=''){
     elem.setAttribute('name', Name);
     elem.setAttribute('class', className);
     elem.setAttribute('id', id);
+    //elem.setAttribute('required', '');
     return elem;
 }
 function createLabelElement(element, labelFor, labelText, className='', id=''){
@@ -119,9 +120,15 @@ countrySelect.append(optionCountryDefault, optionCountry1, optionCountry2);
 
 var formG9 = createHtmlElement('div', 'form-group form-button');
 var formSubmit = createHtmlElement('button', 'btn btn-primary btn-block');
-formSubmit.type = 'button';
+formSubmit.type = 'submit';
 formSubmit.innerHTML = 'Submit';
-formSubmit.addEventListener('click', formData);
+formSubmit.addEventListener('click', function(event){
+    event.preventDefault();
+    getFood();
+    if(foodChoice.length<2) return alert('Please Choose atleast 2 Food Choices');
+    getGender();
+    formData();
+});
 formG9.append(formSubmit);
 formBox.append(formG1, formG2, formG3, formG4, formG5, formG6, formG7, formG8, formG9);
 
@@ -151,12 +158,23 @@ tRowHead.append(tHead1, tHead2, tHead3, tHead4, tHead5, tHead6, tHead7, tHead8);
 var tBody = createHtmlElement('tbody', 'table-body', 'TB');
 tableBox.append(tRowHead, tBody);
 
-var genderValue = '';
-var foodChoice = [];
-var formArray = [firstName, lastName, address, pinCode, genderValue, foodChoice, stateSelect, countrySelect];
+var foodChoice;
+var genderValue;
 var foodArray = [foodChicken, foodPizza, foodBurger, foodNoodles, foodBread];
+var formArray = [firstName, lastName, address, pinCode, genderValue, foodChoice, stateSelect, countrySelect];
+
+function getFood(){
+    foodChoice = [];
+    foodArray.forEach(elem=>{
+        if(elem.checked){
+        foodChoice.push(elem.value);
+        elem.checked='false';
+        }
+    });
+}
 
 function getGender(){
+    genderValue = '';
    if(genderMale.checked){
        genderValue = genderMale.value;
        genderMale.checked='false';
@@ -166,18 +184,11 @@ function getGender(){
        genderFemale.checked='false';
    }
 }
-function getFood(){
-    foodArray.forEach(elem=>{
-        if(elem.checked){
-        foodChoice.push(elem.value);
-        elem.checked='false';
-        }
-    });
-}
+
 function formData(){
-    getGender();
-    getFood();
+        
     var tRow = createHtmlElement('tr', 'table-row');
+
     var tCol1 = createHtmlElement('td', 'table-cell');
     tCol1.innerHTML = firstName.value;
     firstName.value = '';
@@ -201,7 +212,25 @@ function formData(){
     var tCol8 = createHtmlElement('td', 'table-cell');
     tCol8.innerHTML = countrySelect.value;
     countrySelect.value = '';
-
     tRow.append(tCol1, tCol2, tCol3, tCol4, tCol5, tCol6, tCol7, tCol8);
-    tBody.appendChild(tRow);
+    
+    tBody.appendChild(tRow);     
 }
+
+
+/* Tried for looping to create the table but genderValue and foodChoice were undefined inside formArray
+formArray.forEach(elem=>{
+        
+        if(elem.value === undefined){
+            var tCol = createHtmlElement('td', 'table-cell');
+            tCol.innerHTML = elem;
+            elem = undefined;
+        }
+        else{
+            var tCol = createHtmlElement('td', 'table-cell');
+            tCol.innerHTML = elem.value;
+            elem.value = '';
+        }
+        tRow.append(tCol);
+    });
+*/
