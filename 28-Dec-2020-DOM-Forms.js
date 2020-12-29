@@ -163,16 +163,6 @@ var genderValue;
 var foodArray = [foodChicken, foodPizza, foodBurger, foodNoodles, foodBread];
 var formArray = [firstName, lastName, address, pinCode, genderValue, foodChoice, stateSelect, countrySelect];
 
-function getFood(){
-    foodChoice = [];
-    foodArray.forEach(elem=>{
-        if(elem.checked){
-        foodChoice.push(elem.value);
-        elem.checked='false';
-        }
-    });
-}
-
 function getGender(){
     genderValue = '';
    if(genderMale.checked){
@@ -183,43 +173,24 @@ function getGender(){
        genderValue = genderFemale.value;
        genderFemale.checked='false';
    }
+   formArray[4] = genderValue;
+}
+
+function getFood(){
+    foodChoice = [];
+    foodArray.forEach(elem=>{
+        if(elem.checked){
+        foodChoice.push(elem.value);
+        elem.checked='false';
+        }
+    });
+    formArray[5] = foodChoice;
 }
 
 function formData(){
-        
+
     var tRow = createHtmlElement('tr', 'table-row');
-
-    var tCol1 = createHtmlElement('td', 'table-cell');
-    tCol1.innerHTML = firstName.value;
-    firstName.value = '';
-    var tCol2 = createHtmlElement('td', 'table-cell');
-    tCol2.innerHTML = lastName.value;
-    lastName.value = '';
-    var tCol3 = createHtmlElement('td', 'table-cell');
-    tCol3.innerHTML = address.value;
-    address.value = '';
-    var tCol4 = createHtmlElement('td', 'table-cell');
-    tCol4.innerHTML = pinCode.value;
-    pinCode.value = '';
-    var tCol5 = createHtmlElement('td', 'table-cell');
-    tCol5.innerHTML = genderValue;
-    var tCol6 = createHtmlElement('td', 'table-cell');
-    tCol6.innerHTML = foodChoice;
-    foodChoice= [];
-    var tCol7 = createHtmlElement('td', 'table-cell');
-    tCol7.innerHTML = stateSelect.value;
-    stateSelect.value = '';
-    var tCol8 = createHtmlElement('td', 'table-cell');
-    tCol8.innerHTML = countrySelect.value;
-    countrySelect.value = '';
-    tRow.append(tCol1, tCol2, tCol3, tCol4, tCol5, tCol6, tCol7, tCol8);
-    
-    tBody.appendChild(tRow);     
-}
-
-
-/* Tried for looping to create the table but genderValue and foodChoice were undefined inside formArray
-formArray.forEach(elem=>{
+    formArray.forEach(elem=>{
         
         if(elem.value === undefined){
             var tCol = createHtmlElement('td', 'table-cell');
@@ -232,5 +203,8 @@ formArray.forEach(elem=>{
             elem.value = '';
         }
         tRow.append(tCol);
-    });
-*/
+
+        tBody.appendChild(tRow); 
+});
+      
+}
