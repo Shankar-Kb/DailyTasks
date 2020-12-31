@@ -58,7 +58,7 @@ function displaySteps(){
 
 function recursiveCore(elem){
     
-    if(elem === 0) return;
+    if(elem == 0) return;
     if(typeof(elem) === 'number') elem = elem.toString();
 
     var maxV = getMax(elem);
