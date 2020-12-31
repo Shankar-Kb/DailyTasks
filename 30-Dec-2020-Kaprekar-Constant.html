@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Date Manipulation</title>
+    <style>
+        body{
+            background-color: #191919; 
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 100vh;
+            font-size: 35px;
+            color: white;
+        }
+        button{
+            height: 35px;
+            width: 150px;
+        }
+        input{
+            height: 25px;
+            width: 250px;
+        }
+        #display{
+            background-color: #3e3e3e;
+            height: 50%;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Kaprekar's Constant</h1>
+    <div class="input-box">
+        <input type='text' name='Number' value='' id='inpNum' maxlength='4' size='4'>
+        <button onclick="displaySteps()">Check</button>
+        <button onclick="clearDisplay()">Clear</button>
+    </div>
+    <div id='display' style='text-align: center;'></div>
+
+<script>
+
+
+var constant = 6174;
+var count = 0;
+var display = document.getElementById('display');
+
+function displaySteps(){
+    
+    var str = document.getElementById('inpNum').value;
+    if(display.innerHTML === '' && str !== ''){
+    recursiveCore(str);
+    }
+}
+
+function recursiveCore(elem){
+    
+    if(elem === 0) return;
+    if(typeof(elem) === 'number') elem = elem.toString();
+
+    var maxV = getMax(elem);
+    var minV = getMin(elem);
+    elem = maxV - minV;
+    count++;
+    display.innerHTML += `Step ${count}: ${maxV} - ${minV} = ${elem}<br>`;
+    
+    if(elem.toString().length < 4) elem = minTwoDigits(elem);
+
+    if(elem !== constant) recursiveCore(elem);
+    else display.innerHTML += `Match was found on Term: ${count}`;  
+}
+
+function getMax(elem){
+    var temp = elem.split('');
+    var max = '';
+    temp.sort((a,b)=>{return b-a});
+    max = temp.join('');
+    return +max;
+}
+function getMin(elem){
+
+   var temp = elem.split('');
+   var min  = '';
+   temp.sort((a,b)=>{return a-b});
+   min = temp.join('');
+   return +min;
+}
+function minTwoDigits(elem) {
+  return (elem < 1000 ? '0' : '') + elem;
+}
+
+function clearDisplay(){
+   display.innerHTML = '';
+   count = 1;
+   document.getElementById('inpNum').value = '';
+}
+
+</script>
+</body>
+</html>
