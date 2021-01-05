@@ -59,7 +59,7 @@ p.then(result=>{
          <h5 class="card-title">Card title</h5>
          <img src="https://restcountries.eu/data/afg.svg" class="card-img" alt="...">
            <p class="card-text" id='cText'>
-              Capital: <span class='capital'>Kabul</span><br>
+              Capital: <br>span class='capital'>Kabul</span><br>
               Country Codes: <span class='bold'>AF, AFG</span><br>
               Region: <span class='bold'>Asia</span><br>
               Lat,Long: <span class='bold'>33, 65</span></p>
