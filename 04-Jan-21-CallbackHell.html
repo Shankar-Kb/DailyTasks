@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Hell</title>
+
+</head>
+<body style='background-color: #191919;'>
+<script>
+//http://latentflip.com/loupe/
+
+setTimeout(function ten(){ 
+    setTimeout(function nine(){ 
+        setTimeout(function eight(){ 
+            setTimeout(function seven(){ 
+                setTimeout(function six(){ 
+                    setTimeout(function five(){  
+                        setTimeout(function four(){ 
+                            setTimeout(function three(){ 
+                                setTimeout(function two(){ 
+                                    setTimeout(function one(){ 
+                                        setTimeout(function message(){ console.log('Happy New Year!'); }, 1000)
+                                        console.log('1'); }, 1000)
+                                    console.log('2'); }, 1000)
+                                console.log('3'); }, 1000)
+                            console.log('4'); }, 1000)
+                        console.log('5'); }, 1000);
+                    console.log('6'); }, 1000);
+                console.log('7'); }, 1000);
+            console.log('8'); }, 1000); 
+        console.log('9'); }, 1000);
+ console.log('10');
+}, 1000);
+
+</script>
+</body>
+</html>
