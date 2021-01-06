@@ -4,33 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Callback Hell</title>
+    <style>
+        body{
+         height: 100vh;
+         display: flex;
+         flex-flow: column;
+         justify-content: center;
+        }
+        .container-box{
+         font-size: 100px;
+         text-align: center;
+        }
+    </style>
 
 </head>
-<body style='background-color: #191919;'>
+<body style='background-color: #fff;'>
 <script>
 //http://latentflip.com/loupe/
 
-setTimeout(function ten(){ 
-    setTimeout(function nine(){ 
-        setTimeout(function eight(){ 
-            setTimeout(function seven(){ 
-                setTimeout(function six(){ 
-                    setTimeout(function five(){  
-                        setTimeout(function four(){ 
-                            setTimeout(function three(){ 
-                                setTimeout(function two(){ 
-                                    setTimeout(function one(){ 
-                                        setTimeout(function message(){ console.log('Happy New Year!'); }, 1000)
-                                        console.log('1'); }, 1000)
-                                    console.log('2'); }, 1000)
-                                console.log('3'); }, 1000)
-                            console.log('4'); }, 1000)
-                        console.log('5'); }, 1000);
-                    console.log('6'); }, 1000);
-                console.log('7'); }, 1000);
-            console.log('8'); }, 1000); 
-        console.log('9'); }, 1000);
- console.log('10');
+
+var containerBox = document.createElement('div');
+containerBox.setAttribute('class', 'container-box');
+containerBox.setAttribute('id', 'CB');
+document.body.append(containerBox);
+
+setTimeout(function(){ 
+    setTimeout(function(){ 
+        setTimeout(function(){ 
+            setTimeout(function(){ 
+                setTimeout(function(){ 
+                    setTimeout(function(){  
+                        setTimeout(function (){ 
+                            setTimeout(function(){ 
+                                setTimeout(function(){ 
+                                    setTimeout(function(){ 
+                                        setTimeout(function(){ containerBox.innerHTML ='Happy New Year!'; }, 1000)
+                                        containerBox.innerHTML ='1'; }, 1000)
+                                    containerBox.innerHTML ='2'; }, 1000)
+                                containerBox.innerHTML ='3'; }, 1000)
+                            containerBox.innerHTML ='4'; }, 1000)
+                        containerBox.innerHTML ='5'; }, 1000);
+                    containerBox.innerHTML ='6'; }, 1000);
+                containerBox.innerHTML ='7'; }, 1000);
+            containerBox.innerHTML ='8'; }, 1000); 
+        containerBox.innerHTML ='9'; }, 1000);
+ containerBox.innerHTML ='10';
 }, 1000);
 
 </script>
