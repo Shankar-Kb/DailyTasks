@@ -57,7 +57,7 @@ function getWeather(lat, lon, countryCode){
          .then(weatherResp => { return weatherResp.json() })
          .then(weatherData => { 
              //console.log(weatherData);
-             temp = (weatherData.main.temp - 273.15).toFixed(2);
+             temp = (weatherData.main.temp - 273.15).toFixed(0);
              document.getElementById(countryCode).innerHTML = `Weather: <span class='bold'>${temp}${String.fromCharCode(176)}Celcius, ${weatherData.weather[0].main}</span>`;
          })
          .catch(error => console.log(error));
